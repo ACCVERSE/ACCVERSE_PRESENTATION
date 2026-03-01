@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { PawPrint, Globe, Heart, Camera, FileText, Sparkles, ChevronDown } from 'lucide-react';
+import { PawPrint, Globe, Heart, Camera, MessageCircle, Sparkles, ChevronDown, Users } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -38,9 +38,9 @@ export function Hero() {
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          Créez des profils pour vos compagnons, suivez leur santé, 
-          partagez leurs aventures et connectez-vous avec d'autres passionnés 
-          à travers le monde.
+          Créez le profil de vos compagnons, partagez leurs moments, 
+          connectez-vous avec d'autres passionnés et suivez leur santé 
+          au quotidien.
         </p>
 
         {/* CTA Buttons */}
@@ -63,7 +63,7 @@ export function Hero() {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-orange-500">🌍</div>
-            <div className="text-sm text-gray-500">Portée mondiale</div>
+            <div className="text-sm text-gray-500">Communauté mondiale</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-red-500">100%</div>
@@ -82,27 +82,39 @@ export function Hero() {
               <div className="text-center">
                 <div className="font-semibold text-gray-800">Max</div>
                 <div className="text-xs text-gray-500">Golden Retriever</div>
-                <div className="flex justify-center gap-1 mt-2">
+                <div className="flex justify-center items-center gap-2 mt-2">
                   <Heart className="w-4 h-4 text-red-400" />
-                  <span className="text-xs text-gray-500">3 ans</span>
+                  <span className="text-xs text-gray-500">3 ans • 1.2k abonnés</span>
                 </div>
               </div>
             </div>
 
             {/* Card 2 - Center */}
             <div className="w-52 h-72 bg-white rounded-2xl shadow-2xl p-5 transform hover:scale-105 transition-transform z-10 border-2 border-amber-100">
-              <div className="w-full h-28 bg-gradient-to-br from-amber-200 to-orange-200 rounded-xl mb-3 flex items-center justify-center">
+              <div className="w-full h-28 bg-gradient-to-br from-amber-200 to-orange-200 rounded-xl mb-3 flex items-center justify-center relative">
                 <span className="text-5xl">🐈</span>
+                <div className="absolute -bottom-2 -right-2 bg-gradient-to-br from-amber-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                  🔥 Populaire
+                </div>
               </div>
               <div className="text-center">
                 <div className="font-bold text-gray-800 text-lg">Luna</div>
                 <div className="text-sm text-gray-500">Chat européen</div>
-                <div className="flex justify-center gap-2 mt-2">
-                  <Camera className="w-4 h-4 text-amber-400" />
-                  <FileText className="w-4 h-4 text-amber-400" />
-                  <Heart className="w-4 h-4 text-red-400" />
+                <div className="flex justify-center gap-3 mt-2">
+                  <div className="flex items-center gap-1">
+                    <Heart className="w-4 h-4 text-red-400" />
+                    <span className="text-xs text-gray-600">2.4k</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MessageCircle className="w-4 h-4 text-blue-400" />
+                    <span className="text-xs text-gray-600">156</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Users className="w-4 h-4 text-purple-400" />
+                    <span className="text-xs text-gray-600">890</span>
+                  </div>
                 </div>
-                <div className="text-xs text-gray-400 mt-2">12 photos • 5 documents</div>
+                <div className="text-xs text-gray-400 mt-2">12 photos • 8 vidéos</div>
               </div>
             </div>
 
@@ -114,9 +126,9 @@ export function Hero() {
               <div className="text-center">
                 <div className="font-semibold text-gray-800">Shelly</div>
                 <div className="text-xs text-gray-500">Tortue terrestre</div>
-                <div className="flex justify-center gap-1 mt-2">
+                <div className="flex justify-center items-center gap-2 mt-2">
                   <Heart className="w-4 h-4 text-red-400" />
-                  <span className="text-xs text-gray-500">15 ans</span>
+                  <span className="text-xs text-gray-500">15 ans • 350 abonnés</span>
                 </div>
               </div>
             </div>

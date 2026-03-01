@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { PawPrint, Heart, Shield, Globe, Sparkles } from 'lucide-react';
+import { PawPrint, Heart, Shield, Globe, Sparkles, Users, MessageCircle, Share2 } from 'lucide-react';
 
 export function About() {
   return (
@@ -10,124 +10,142 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-amber-100 px-4 py-2 rounded-full mb-6">
-              <Sparkles className="w-4 h-4 text-amber-600" />
-              <span className="text-sm font-medium text-amber-700">Notre mission</span>
+            <div className="inline-flex items-center gap-2 bg-teal-100 px-4 py-2 rounded-full mb-6">
+              <Users className="w-4 h-4 text-teal-600" />
+              <span className="text-sm font-medium text-teal-700">Réseau social animalier</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Pourquoi <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Accverse</span> ?
+              Connectez-vous avec la{' '}
+              <span className="bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
+                communauté animale
+              </span>
             </h2>
 
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Nous croyons que chaque animal mérite une présence numérique. 
-              Que vous ayez un chien, un chat, un furet ou une tortue, 
-              Accverse vous offre un espace dédié pour célébrer leur vie et 
-              prendre soin d'eux au quotidien.
+              Accverse est avant tout un réseau social dédié à vos animaux. 
+              Partagez leurs moments, suivez d'autres compagnons, 
+              échangez avec des passionnés du monde entier.
             </p>
 
             <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
+                  <Share2 className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-1">Partagez leur vie</h3>
+                  <p className="text-gray-600 text-sm">
+                    Photos, vidéos, histoires... Créez le fil d'actualité de vos compagnons 
+                    et partagez-le avec vos abonnés.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400 to-violet-500 flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800 mb-1">Échangez et commentez</h3>
+                  <p className="text-gray-600 text-sm">
+                    Likez, commentez, envoyez des messages à d'autres propriétaires. 
+                    Créez des liens autour de votre passion commune.
+                  </p>
+                </div>
+              </div>
+
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Par passion, pour les passionnés</h3>
+                  <h3 className="font-semibold text-gray-800 mb-1">Et bien plus encore...</h3>
                   <p className="text-gray-600 text-sm">
-                    Créé par des amoureux des animaux, pour tous ceux qui considèrent 
-                    leurs compagnons comme des membres de la famille.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Sécurité et confidentialité</h3>
-                  <p className="text-gray-600 text-sm">
-                    Vos données sont protégées. Les informations sensibles (santé, documents) 
-                    sont sécurisées par un code PIN et un chiffrement avancé.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Un projet mondial</h3>
-                  <p className="text-gray-600 text-sm">
-                    Accverse est conçu pour fonctionner partout dans le monde, 
-                    avec un support pour plus de 50 espèces animales.
+                    Suivi santé, documents, rappels... Accverse vous accompagne 
+                    dans tous les aspects de la vie de vos compagnons.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8">
-              <Button size="lg" className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white rounded-full px-8">
-                <PawPrint className="w-5 h-5 mr-2" />
-                Rejoindre l'aventure
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button size="lg" className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-full px-8">
+                <Users className="w-5 h-5 mr-2" />
+                Rejoindre la communauté
               </Button>
             </div>
           </div>
 
           {/* Right - Visual */}
           <div className="relative">
-            {/* Main Card */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 relative z-10">
-              <div className="text-center mb-6">
-                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-amber-200 to-orange-200 flex items-center justify-center mb-4">
-                  <span className="text-4xl">🐕</span>
+            {/* Social Feed Preview */}
+            <div className="bg-white rounded-3xl shadow-2xl p-6 relative z-10">
+              {/* Post Header */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-200 to-orange-200 flex items-center justify-center">
+                  <span className="text-2xl">🐕</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800">Max le Golden</h3>
-                <p className="text-gray-500 text-sm">3 ans • Golden Retriever</p>
+                <div>
+                  <div className="font-semibold text-gray-800">Max le Golden</div>
+                  <div className="text-xs text-gray-500">il y a 2 heures • 📍 Paris</div>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="bg-amber-50 rounded-xl p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-600">Santé</span>
-                    <span className="text-xs text-green-600 bg-green-100 px-2 py-1 rounded-full">À jour</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="text-xs bg-white px-2 py-1 rounded text-gray-600">✓ Vaccins</span>
-                    <span className="text-xs bg-white px-2 py-1 rounded text-gray-600">✓ Puce</span>
-                    <span className="text-xs bg-white px-2 py-1 rounded text-gray-600">✓ Stérilisé</span>
-                  </div>
-                </div>
+              {/* Post Image */}
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl h-48 flex items-center justify-center mb-4">
+                <span className="text-6xl">🐕‍🦺</span>
+              </div>
 
-                <div className="grid grid-cols-3 gap-3 text-center">
-                  <div className="bg-gray-50 rounded-xl p-3">
-                    <div className="text-2xl font-bold text-amber-500">42</div>
-                    <div className="text-xs text-gray-500">Photos</div>
+              {/* Post Actions */}
+              <div className="flex items-center gap-6 mb-4">
+                <button className="flex items-center gap-1 text-red-500">
+                  <Heart className="w-6 h-6 fill-current" />
+                  <span className="font-medium">247</span>
+                </button>
+                <button className="flex items-center gap-1 text-gray-500 hover:text-blue-500">
+                  <MessageCircle className="w-6 h-6" />
+                  <span className="font-medium">32</span>
+                </button>
+                <button className="flex items-center gap-1 text-gray-500 hover:text-green-500">
+                  <Share2 className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Comments Preview */}
+              <div className="bg-gray-50 rounded-xl p-3">
+                <div className="flex items-start gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-200 to-cyan-200 flex items-center justify-center">
+                    <span className="text-sm">🐈</span>
                   </div>
-                  <div className="bg-gray-50 rounded-xl p-3">
-                    <div className="text-2xl font-bold text-orange-500">8</div>
-                    <div className="text-xs text-gray-500">Documents</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-xl p-3">
-                    <div className="text-2xl font-bold text-red-500">156</div>
-                    <div className="text-xs text-gray-500">J'aime</div>
+                  <div>
+                    <span className="font-medium text-sm text-gray-800">Luna</span>
+                    <span className="text-sm text-gray-600"> Quel beau golden ! 😍</span>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Floating User Avatars */}
+            <div className="absolute -top-4 -right-4 w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform">
+              <span className="text-2xl">🐈</span>
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center transform -rotate-12 hover:rotate-0 transition-transform">
+              <span className="text-xl">🐢</span>
+            </div>
+            <div className="absolute top-1/2 -right-8 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">
+              <span className="text-lg">🦜</span>
+            </div>
+
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-amber-200 rounded-full opacity-50 blur-xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-orange-200 rounded-full opacity-50 blur-xl" />
-            <div className="absolute top-1/2 -right-8 text-4xl opacity-30">🐾</div>
-            <div className="absolute bottom-1/4 -left-8 text-3xl opacity-30">🐾</div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-teal-200 rounded-full opacity-50 blur-xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-cyan-200 rounded-full opacity-50 blur-xl" />
           </div>
         </div>
 
         {/* Species Banner */}
         <div className="mt-20 text-center">
-          <p className="text-gray-500 mb-6">Plus de 50 espèces supportées</p>
+          <p className="text-gray-500 mb-6">Rejoignez des milliers de propriétaires passionnés</p>
           <div className="flex flex-wrap justify-center gap-4 text-4xl">
             <span className="hover:scale-125 transition-transform cursor-pointer" title="Chien">🐕</span>
             <span className="hover:scale-125 transition-transform cursor-pointer" title="Chat">🐈</span>
