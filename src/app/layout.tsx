@@ -14,22 +14,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Accverse - A Pet-Centric Social Network",
-  description: "A social network exclusively for pets and their owners. Content is written from the animal's perspective - no human selfies, just pure animal love.",
-  keywords: ["Accverse", "pets", "social network", "animals", "dogs", "cats", "pet owners", "pet care"],
+  title: "Accverse - Le Réseau Social de Vos Animaux",
+  description: "Le premier réseau social dédié à vos animaux de compagnie. Créez des profils, partagez leurs moments, connectez-vous avec d'autres passionnés à travers le monde.",
+  keywords: ["Accverse", "pets", "social network", "animaux", "chiens", "chats", "réseau social animalier", "pet community"],
   authors: [{ name: "Accverse Team" }],
   icons: {
-    icon: "/logo.svg",
+    icon: "/favicon.png",
+    apple: "/accverse-logo.png",
   },
   openGraph: {
-    title: "Accverse - A Pet-Centric Social Network",
-    description: "Where animals take center stage. A calm, animal-focused social network.",
+    title: "Accverse - Le Réseau Social de Vos Animaux",
+    description: "Le premier réseau social dédié à vos animaux. Partagez, connectez-vous, célébrez la vie de vos compagnons.",
     type: "website",
+    images: ["/accverse-logo.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Accverse - A Pet-Centric Social Network",
-    description: "Where animals take center stage. A calm, animal-focused social network.",
+    title: "Accverse - Le Réseau Social de Vos Animaux",
+    description: "Le premier réseau social dédié à vos animaux.",
+    images: ["/accverse-logo.png"],
   },
 };
 
@@ -39,9 +42,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-foreground min-h-screen`}
       >
         {children}
         <Toaster />

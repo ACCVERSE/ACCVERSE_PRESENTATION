@@ -1,8 +1,9 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { PawPrint, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,14 +13,21 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
-              <PawPrint className="w-6 h-6 text-white" />
+          <a href="#" className="flex items-center gap-3">
+            <div className="w-10 h-10 relative">
+              <Image 
+                src="/accverse-logo.png" 
+                alt="Accverse Logo" 
+                width={40} 
+                height={40}
+                className="object-contain rounded-lg"
+                priority
+              />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
               Accverse
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
